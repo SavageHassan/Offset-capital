@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --logo-blue: #1a4072; /* sampled from the Offset Capital logo */
+    --gold: #c6a15b;
+    --nav-h: 76px;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white font-sans text-navy-900 antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'cv11' 1;
+  }
+
+  ::selection {
+    background: var(--logo-blue);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+
+  /* Numerals in financial tables stay in vertical register. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell px-gutter;
+  }
+
+  /* Eyebrow label: small-caps, wide tracking, gold tick. */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 font-sans text-label font-medium uppercase;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply block h-px w-8 bg-gold-400;
+  }
+
+  /* The "offset rule": two hairlines, the lower one shifted — a quiet nod to
+     the brand name and the counterbalance idea it stands for. */
+  .offset-rule {
+    @apply relative h-px w-full bg-current opacity-20;
+  }
+  .offset-rule::after {
+    content: '';
+    @apply absolute left-6 top-[3px] h-px w-20 bg-gold-400 opacity-100;
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-left scale-x-0 bg-gold-400 transition-transform duration-500 ease-offset;
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    @apply scale-x-100;
+  }
+
+  .prose-editorial {
+    @apply text-[1.0625rem] leading-[1.75] text-stone-600;
+  }
+  .prose-editorial p + p {
+    @apply mt-5;
+  }
+  /* Blocks are often wrapped in a reveal <div>, so `p + p` cannot see them.
+     Space the direct children instead; larger heading margins still win
+     through normal margin collapsing. */
+  .prose-editorial > * + * {
+    @apply mt-5;
+  }
+  .prose-editorial h2 {
+    @apply mt-12 font-display text-display-sm font-normal text-navy-900;
+  }
+  .prose-editorial h3 {
+    @apply mt-10 font-sans text-base font-semibold uppercase tracking-[0.1em] text-navy-700;
+  }
+  .prose-editorial strong {
+    @apply font-semibold text-navy-900;
+  }
+  .prose-editorial a {
+    @apply text-navy-700 underline decoration-gold-400 decoration-1 underline-offset-4 transition-colors hover:text-gold-600;
+  }
+  .prose-editorial ul {
+    @apply mt-5 space-y-2.5;
+  }
+  .prose-editorial li {
+    @apply relative pl-6;
+  }
+  .prose-editorial li::before {
+    content: '';
+    @apply absolute left-0 top-[0.7em] h-[5px] w-[5px] rotate-45 bg-gold-400;
+  }
+}
+
+@layer utilities {
+  .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+/* Respect the OS reduced-motion setting across every animated surface. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
