@@ -1,12 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-/** Share row — mirrors the "Share this article" affordance on the live site. */
+/**
+ * Share row — mirrors the "Share this article" affordance on the live site.
+ *
+ * The absolute URL is only known in the browser, so it is resolved after mount.
+ * Reading `window.location` during render would make the server and client
+ * markup disagree and trip a hydration mismatch; the relative path is a valid
+ * target in the meantime.
+ */
 export default function ShareLinks({ title, slug }: { title: string; slug: string }) {
+  const [url, setUrl] = useState(`/news/${slug}`);
   const [copied, setCopied] = useState(false);
 
-  const url = typeof window === 'undefined' ? `/news/${slug}` : window.location.href;
+  useEffect(() => {
+    setUrl(window.location.href);
+  }, [slug]);
 
   const items = [
     {
