@@ -41,7 +41,7 @@ export default function ParamSheet({
         >
           {title}
         </h4>
-        <p className={`font-sans text-[0.625rem] uppercase tracking-[0.14em] ${dark ? 'text-white/35' : 'text-stone-400'}`}>
+        <p className={`font-sans text-[0.625rem] uppercase tracking-[0.14em] ${dark ? 'text-white/55' : 'text-stone-500'}`}>
           Source: {source}
         </p>
       </div>
@@ -59,7 +59,7 @@ export default function ParamSheet({
           >
             <dt
               className={`font-sans text-[0.625rem] font-medium uppercase tracking-[0.18em] ${
-                dark ? 'text-white/45' : 'text-stone-400'
+                dark ? 'text-white/60' : 'text-stone-500'
               }`}
             >
               {p.label}
@@ -90,7 +90,7 @@ export default function ParamSheet({
           >
             <dt
               className={`font-sans text-[0.625rem] font-medium uppercase tracking-[0.18em] sm:pt-1 ${
-                dark ? 'text-white/45' : 'text-stone-400'
+                dark ? 'text-white/60' : 'text-stone-500'
               }`}
             >
               {p.label}

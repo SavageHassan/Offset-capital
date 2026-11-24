@@ -46,7 +46,7 @@ export default function Footer() {
               href={site.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2.5 font-sans text-[0.625rem] font-medium uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-gold-400"
+              className="mt-6 inline-flex items-center gap-2.5 font-sans text-[0.625rem] font-medium uppercase tracking-[0.18em] text-white/60 transition-colors hover:text-gold-400"
             >
               <svg viewBox="0 0 448 512" className="h-3 w-3 fill-current" aria-hidden>
                 <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <nav aria-label="Footer">
-            <p className="eyebrow text-white/40">Navigate</p>
+            <p className="eyebrow text-white/55">Navigate</p>
             <ul className="mt-5 space-y-2.5">
               <li>
                 <Link href="/" className="link-underline font-sans text-sm text-white/70 hover:text-white">
@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* Mailing list */}
           <div>
-            <p className="eyebrow text-white/40">Join our mailing list</p>
+            <p className="eyebrow text-white/55">Join our mailing list</p>
             <div className="mt-5">
               <MailingList />
             </div>
@@ -86,10 +86,10 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-display text-sm italic text-gold-400/75">{site.motto}</p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="font-sans text-xs text-white/40 transition-colors hover:text-white/70">
+            <Link href="/privacy" className="font-sans text-xs text-white/55 transition-colors hover:text-white/70">
               Privacy policy
             </Link>
-            <p className="font-sans text-xs text-white/35">
+            <p className="font-sans text-xs text-white/55">
               © {year} {site.legalName}
             </p>
           </div>

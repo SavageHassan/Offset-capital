@@ -28,8 +28,11 @@
     color: #fff;
   }
 
+  /* Focus indicator. gold-400 only reaches ~2.2:1 against white, below the
+     3:1 WCAG needs for a non-text indicator, so the ring uses the deeper
+     gold-500 and a thicker stroke. It stays clearly visible on navy too. */
   :focus-visible {
-    outline: 2px solid var(--gold);
+    outline: 3px solid #b38c45;
     outline-offset: 3px;
   }
 
@@ -88,25 +91,29 @@
   .prose-editorial > * + * {
     @apply mt-5;
   }
-  .prose-editorial h2 {
+  /* Element rules are wrapped in :where() so they carry element-only
+     specificity. A utility class on the element therefore always wins — a
+     button dropped inside prose keeps its own colour instead of being
+     repainted navy-on-navy by the link rule. */
+  :where(.prose-editorial) h2 {
     @apply mt-12 font-display text-display-sm font-normal text-navy-900;
   }
-  .prose-editorial h3 {
+  :where(.prose-editorial) h3 {
     @apply mt-10 font-sans text-base font-semibold uppercase tracking-[0.1em] text-navy-700;
   }
-  .prose-editorial strong {
+  :where(.prose-editorial) strong {
     @apply font-semibold text-navy-900;
   }
-  .prose-editorial a {
-    @apply text-navy-700 underline decoration-gold-400 decoration-1 underline-offset-4 transition-colors hover:text-gold-600;
+  :where(.prose-editorial) a {
+    @apply text-navy-700 underline decoration-gold-400 decoration-1 underline-offset-4 transition-colors hover:text-gold-700;
   }
-  .prose-editorial ul {
+  :where(.prose-editorial) ul {
     @apply mt-5 space-y-2.5;
   }
-  .prose-editorial li {
+  :where(.prose-editorial) li {
     @apply relative pl-6;
   }
-  .prose-editorial li::before {
+  :where(.prose-editorial) li::before {
     content: '';
     @apply absolute left-0 top-[0.7em] h-[5px] w-[5px] rotate-45 bg-gold-400;
   }

@@ -44,14 +44,14 @@ export default function StrategiesPage() {
                 >
                   <div>
                     <div className="flex items-baseline gap-4">
-                      <span className="tnum font-display text-[1.15rem] font-light text-gold-500">
+                      <span className="tnum font-display text-[1.15rem] font-light text-gold-700">
                         {s.number}
                       </span>
                       <h2 className="font-display text-[1.45rem] font-normal leading-tight text-navy-900 transition-colors duration-500 group-hover:text-navy-700">
                         {s.name}
                       </h2>
                     </div>
-                    <p className="mt-3 font-sans text-[0.75rem] uppercase tracking-[0.14em] text-stone-400">
+                    <p className="mt-3 font-sans text-[0.75rem] uppercase tracking-[0.14em] text-stone-500">
                       {s.stackLabel}
                     </p>
                   </div>
@@ -83,7 +83,7 @@ export default function StrategiesPage() {
                   <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
                     <span
                       className={`tnum font-display text-[1.35rem] font-light ${
-                        dark ? 'text-gold-400' : 'text-gold-500'
+                        dark ? 'text-gold-400' : 'text-gold-700'
                       }`}
                     >
                       {s.number}
@@ -168,7 +168,7 @@ export default function StrategiesPage() {
                 ))}
               </ul>
               <Reveal>
-                <p className="mt-7 font-sans text-[0.8125rem] text-white/40">No land.</p>
+                <p className="mt-7 font-sans text-[0.8125rem] text-white/55">No land.</p>
               </Reveal>
             </div>
             <div>
@@ -187,7 +187,7 @@ export default function StrategiesPage() {
                 ))}
               </ul>
               <Reveal>
-                <p className="mt-7 font-sans text-[0.8125rem] leading-relaxed text-white/40">
+                <p className="mt-7 font-sans text-[0.8125rem] leading-relaxed text-white/55">
                   No pre-development or ground-up construction under the bridge and subordinate
                   programs. Ground-up multifamily and industrial is financed under construction
                   lending.
@@ -196,7 +196,7 @@ export default function StrategiesPage() {
             </div>
           </div>
           <Reveal>
-            <p className="mt-16 font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-white/30">
+            <p className="mt-16 font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-white/55">
               Geographic focus — nationwide
             </p>
           </Reveal>

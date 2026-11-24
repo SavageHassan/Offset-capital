@@ -26,7 +26,7 @@ export default function CTA({
       <div className="shell relative py-section">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-24">
           <div>
-            <OffsetMark className="h-10 w-10 text-white/35" />
+            <OffsetMark className="h-10 w-10 text-white/55" />
             <Reveal>
               <h2 className="mt-9 max-w-[22ch] font-display text-display-md font-extralight leading-[1.08]">
                 {heading}
@@ -42,7 +42,7 @@ export default function CTA({
           <Reveal delay={0.15} className="lg:pb-2">
             <div className="space-y-8 border-t border-white/20 pt-8">
               <div>
-                <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/45">Email</p>
+                <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/60">Email</p>
                 <a
                   href={`mailto:${site.email}`}
                   className="link-underline mt-2 block font-display text-[1.6rem] font-light text-white"
@@ -51,7 +51,7 @@ export default function CTA({
                 </a>
               </div>
               <div>
-                <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/45">Telephone</p>
+                <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/60">Telephone</p>
                 <a
                   href={site.phoneHref}
                   className="link-underline tnum mt-2 block font-display text-[1.6rem] font-light text-white"
@@ -64,7 +64,7 @@ export default function CTA({
                   Contact the team
                 </Button>
               </div>
-              <p className="font-sans text-[0.8125rem] leading-relaxed text-white/45">
+              <p className="font-sans text-[0.8125rem] leading-relaxed text-white/60">
                 Prefer a broker introduction?{' '}
                 <Link href="/strategies#broker-partners" className="underline decoration-gold-400 underline-offset-4">
                   We pay commissions at closing.

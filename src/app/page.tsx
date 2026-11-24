@@ -50,7 +50,7 @@ export default function HomePage() {
               <div className="mt-16 grid gap-px bg-navy-900/10 sm:grid-cols-3">
                 {pillars.map((p, i) => (
                   <Reveal key={p.title} delay={i * 0.08} className="bg-white px-6 py-8">
-                    <span className="tnum font-sans text-[0.625rem] font-medium uppercase tracking-[0.18em] text-gold-600">
+                    <span className="tnum font-sans text-[0.625rem] font-medium uppercase tracking-[0.18em] text-gold-700">
                       {p.index}
                     </span>
                     <h3 className="mt-5 font-display text-[1.3rem] font-normal leading-tight text-navy-900">
@@ -97,7 +97,7 @@ export default function HomePage() {
               <Reveal delay={0.25}>
                 <div className="mt-12 space-y-7 border-t border-white/15 pt-10">
                   <div>
-                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/40">
+                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/55">
                       Property types we lend against
                     </p>
                     <p className="mt-3 font-display text-lg font-light leading-relaxed text-white/90">
@@ -105,14 +105,14 @@ export default function HomePage() {
                     </p>
                   </div>
                   <div>
-                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/40">
+                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/55">
                       Use of proceeds
                     </p>
                     <p className="mt-3 font-display text-lg font-light leading-relaxed text-white/90">
                       {usesOfProceeds.join(' · ')}
                     </p>
                   </div>
-                  <p className="font-sans text-[0.75rem] leading-relaxed text-white/35">
+                  <p className="font-sans text-[0.75rem] leading-relaxed text-white/55">
                     Per the published senior bridge and subordinate financing parameter sheets. No land.
                   </p>
                 </div>
@@ -189,10 +189,10 @@ export default function HomePage() {
 
                     <div className={`lg:col-span-6 ${flip ? 'lg:order-1 lg:col-start-1' : 'lg:order-2 lg:col-start-7'}`}>
                       <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
-                        <span className="tnum font-display text-[1.25rem] font-light text-gold-500">
+                        <span className="tnum font-display text-[1.25rem] font-light text-gold-700">
                           {s.number}
                         </span>
-                        <span className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
+                        <span className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-500">
                           {s.stackLabel}
                         </span>
                       </div>
@@ -205,7 +205,7 @@ export default function HomePage() {
                       <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-5">
                         {key.map((p) => (
                           <div key={p.label}>
-                            <dt className="font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-stone-400">
+                            <dt className="font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-stone-500">
                               {p.label}
                             </dt>
                             <dd className="tnum mt-1.5 font-display text-[1.15rem] font-normal text-navy-900">
@@ -249,7 +249,7 @@ export default function HomePage() {
           </div>
           <TransactionIndex items={featuredDeals} />
           <Reveal>
-            <p className="mt-8 max-w-measure-lg font-sans text-[0.75rem] leading-relaxed text-stone-400">
+            <p className="mt-8 max-w-measure-lg font-sans text-[0.75rem] leading-relaxed text-stone-500">
               Each entry above links to the company announcement it is drawn from. Figures, property
               details and uses of proceeds are as published by Offset Capital.
             </p>
@@ -278,7 +278,7 @@ export default function HomePage() {
 
             <div>
               <Reveal>
-                <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/40">
+                <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/55">
                   What the principals bring
                 </p>
               </Reveal>
@@ -315,13 +315,13 @@ export default function HomePage() {
                     </dt>
                     <dd>
                       <p className="font-sans text-[0.9375rem] leading-snug text-white/90">{row.label}</p>
-                      <p className="mt-1.5 font-sans text-[0.8125rem] text-white/45">{row.note}</p>
+                      <p className="mt-1.5 font-sans text-[0.8125rem] text-white/60">{row.note}</p>
                     </dd>
                   </Reveal>
                 ))}
               </dl>
               <Reveal>
-                <p className="mt-7 font-sans text-[0.75rem] leading-relaxed text-white/35">
+                <p className="mt-7 font-sans text-[0.75rem] leading-relaxed text-white/55">
                   Figures above describe the principals’ individual track records at prior firms, as
                   published in their biographies. They are not Offset Capital’s own origination volume.
                 </p>

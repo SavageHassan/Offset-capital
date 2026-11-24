@@ -150,7 +150,7 @@ export default function Hero({ deals }: { deals: Post[] }) {
           >
             {AT_A_GLANCE.map((item) => (
               <div key={item.label} className="bg-navy-950/55 px-3 py-4 backdrop-blur-sm sm:px-4 sm:py-5">
-                <dt className="font-sans text-[0.5625rem] font-medium uppercase tracking-[0.16em] text-white/45">
+                <dt className="font-sans text-[0.5625rem] font-medium uppercase tracking-[0.16em] text-white/60">
                   {item.label}
                 </dt>
                 <dd className="tnum mt-2.5 whitespace-normal font-display text-[0.95rem] font-light leading-tight text-white sm:whitespace-nowrap sm:text-[1.1rem]">

@@ -42,7 +42,7 @@ export default function PageHero({
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: EASE }}
           aria-label="Breadcrumb"
-          className="flex items-center gap-3 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/45"
+          className="flex items-center gap-3 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/60"
         >
           <Link href="/" className="transition-colors hover:text-gold-400">
             Offset Capital

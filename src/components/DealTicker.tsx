@@ -24,10 +24,10 @@ export default function DealTicker({ items }: { items: Post[] }) {
           <div key={i} className="flex shrink-0 items-center gap-4" aria-hidden={i >= entries.length}>
             <span aria-hidden className="block h-1 w-1 rotate-45 bg-gold-400" />
             <span className="tnum font-display text-lg font-normal text-white">{e.amount}</span>
-            <span className="font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-white/45">
+            <span className="font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-white/60">
               {e.asset}
             </span>
-            <span className="font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-white/30">
+            <span className="font-sans text-[0.6875rem] uppercase tracking-[0.16em] text-white/55">
               {e.location}
             </span>
           </div>

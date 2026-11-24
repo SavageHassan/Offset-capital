@@ -36,7 +36,7 @@ export default function MailingList() {
   }
 
   const field =
-    'w-full border-b border-white/20 bg-transparent py-3 font-sans text-sm text-white placeholder:text-white/35 transition-colors duration-300 focus:border-gold-400 focus:outline-none';
+    'w-full border-b border-white/20 bg-transparent py-3 font-sans text-sm text-white placeholder:text-white/55 transition-colors duration-300 focus:border-gold-400 focus:outline-none';
 
   if (state === 'done') {
     return (

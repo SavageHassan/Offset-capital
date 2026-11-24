@@ -4,7 +4,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 const base =
-  'group relative inline-flex items-center justify-center gap-3 overflow-hidden px-7 py-4 font-sans text-label-lg font-medium uppercase transition-colors duration-500 ease-offset';
+  'group relative inline-flex items-center justify-center gap-3 overflow-hidden px-7 py-4 font-sans text-label-lg font-medium uppercase no-underline transition-colors duration-500 ease-offset';
 
 const variants = {
   solid: 'bg-navy-700 text-white hover:text-navy-900',

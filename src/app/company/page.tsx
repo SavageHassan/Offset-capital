@@ -60,7 +60,7 @@ export default function CompanyPage() {
                     robust balance sheet, helps ensure speed and certainty of execution, which are
                     critical in the current environment.”
                   </p>
-                  <footer className="mt-6 font-sans text-[0.6875rem] uppercase tracking-[0.18em] text-stone-400">
+                  <footer className="mt-6 font-sans text-[0.6875rem] uppercase tracking-[0.18em] text-stone-500">
                     Adam Frank, Principal — Offset Capital
                   </footer>
                 </blockquote>
@@ -75,7 +75,7 @@ export default function CompanyPage() {
                 sizes="(max-width: 1024px) 100vw, 38vw"
               />
               <Reveal delay={0.1}>
-                <p className="mt-6 max-w-[32ch] font-sans text-[0.8125rem] leading-relaxed text-stone-400">
+                <p className="mt-6 max-w-[32ch] font-sans text-[0.8125rem] leading-relaxed text-stone-500">
                   Offset Capital, LLC — a commercial real estate lender launched in early 2024,
                   lending nationwide.
                 </p>
@@ -119,7 +119,7 @@ export default function CompanyPage() {
                       {m.body}
                     </span>
                   </span>
-                  <span className="flex items-center gap-3 font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-white/40 transition-colors duration-500 group-hover:text-white">
+                  <span className="flex items-center gap-3 font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-white/55 transition-colors duration-500 group-hover:text-white">
                     Read
                     <span
                       aria-hidden

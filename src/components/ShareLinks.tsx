@@ -31,7 +31,7 @@ export default function ShareLinks({ title, slug }: { title: string; slug: strin
 
   return (
     <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
-      <span className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
+      <span className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-500">
         Share this article
       </span>
       {items.map((item) => (

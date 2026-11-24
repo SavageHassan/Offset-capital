@@ -33,7 +33,7 @@ export default function TransactionTable({ items }: { items: Post[] }) {
               {year}
             </h3>
             <span aria-hidden className="h-px flex-1 bg-navy-900/15" />
-            <span className="tnum font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
+            <span className="tnum font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-500">
               {rows.length} {rows.length === 1 ? 'transaction' : 'transactions'}
             </span>
           </div>
@@ -54,11 +54,11 @@ export default function TransactionTable({ items }: { items: Post[] }) {
                     href={`/news/${post.slug}`}
                     className="group grid grid-cols-1 items-baseline gap-x-8 gap-y-1.5 py-5 md:grid-cols-[9rem_9rem_minmax(0,1fr)_10rem_1.5rem]"
                   >
-                    <span className="tnum font-display text-[1.3rem] font-normal leading-none text-navy-700 transition-colors duration-400 group-hover:text-gold-600 md:text-[1.45rem]">
+                    <span className="tnum font-display text-[1.3rem] font-normal leading-none text-navy-700 transition-colors duration-400 group-hover:text-gold-700 md:text-[1.45rem]">
                       {deal.amount}
                     </span>
 
-                    <span className="font-sans text-[0.625rem] uppercase tracking-[0.16em] text-stone-400">
+                    <span className="font-sans text-[0.625rem] uppercase tracking-[0.16em] text-stone-500">
                       {deal.kind === 'equity'
                         ? 'Preferred equity'
                         : deal.kind === 'advisory'

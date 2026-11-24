@@ -43,7 +43,7 @@ export default function NewsPage() {
           </div>
           <TransactionTable items={transactions} />
           <Reveal>
-            <p className="mt-8 max-w-measure-lg font-sans text-[0.75rem] leading-relaxed text-stone-400">
+            <p className="mt-8 max-w-measure-lg font-sans text-[0.75rem] leading-relaxed text-stone-500">
               Figures, property details and uses of proceeds are as published in each announcement.
               The Del Cerro entry is a disposition Offset Capital was retained to manage, not a loan.
             </p>

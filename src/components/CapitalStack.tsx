@@ -58,7 +58,7 @@ export default function CapitalStack() {
               <span>
                 <span
                   className={`block font-sans text-[0.625rem] font-medium uppercase tracking-[0.18em] transition-colors duration-500 ${
-                    isActive && layer.offset ? 'text-gold-400' : 'text-stone-400'
+                    isActive && layer.offset ? 'text-gold-300' : 'text-stone-500'
                   }`}
                 >
                   {layer.tier}
@@ -72,8 +72,8 @@ export default function CapitalStack() {
                   layer.offset
                     ? isActive
                       ? 'text-white/70'
-                      : 'text-navy-700/50'
-                    : 'text-stone-400'
+                      : 'text-navy-700/75'
+                    : 'text-stone-500'
                 }`}
               >
                 {layer.offset ? 'Offset' : 'Sponsor'}
@@ -81,7 +81,7 @@ export default function CapitalStack() {
             </motion.button>
           );
         })}
-        <p className="mt-3 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
+        <p className="mt-3 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-500">
           Senior debt at the base · hover a position
         </p>
       </div>
@@ -105,7 +105,7 @@ export default function CapitalStack() {
               transition={{ duration: 0.5, ease: EASE }}
               className={i === 0 ? '' : 'absolute inset-0 pl-7'}
             >
-              <p className="font-sans text-label font-medium uppercase tracking-[0.18em] text-gold-600">
+              <p className="font-sans text-label font-medium uppercase tracking-[0.18em] text-gold-700">
                 {layer.offset ? 'Offset Capital position' : 'Borrower position'}
               </p>
               <p className="mt-4 font-display text-[1.75rem] font-light leading-tight text-navy-900">
@@ -115,7 +115,7 @@ export default function CapitalStack() {
               {layer.strategy && (
                 <Link
                   href={`/strategies#${layer.strategy}`}
-                  className="group mt-6 inline-flex items-center gap-3 font-sans text-label font-medium uppercase tracking-[0.18em] text-navy-700 transition-colors hover:text-gold-600"
+                  className="group mt-6 inline-flex items-center gap-3 font-sans text-label font-medium uppercase tracking-[0.18em] text-navy-700 transition-colors hover:text-gold-700"
                 >
                   Full parameters
                   <span

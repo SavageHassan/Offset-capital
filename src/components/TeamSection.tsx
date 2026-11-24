@@ -61,7 +61,7 @@ export default function TeamSection() {
                   <h3 className="font-display text-[1.4rem] font-normal leading-tight text-navy-900">
                     {member.name}
                   </h3>
-                  <p className="mt-1.5 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
+                  <p className="mt-1.5 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-500">
                     {member.role}
                   </p>
                 </div>

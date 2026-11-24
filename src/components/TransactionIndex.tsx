@@ -39,7 +39,7 @@ export default function TransactionIndex({ items }: { items: Post[] }) {
                 dim ? 'opacity-40' : 'opacity-100'
               }`}
             >
-              <span className="tnum font-display text-[1.75rem] font-normal leading-none text-navy-700 transition-colors duration-500 group-hover:text-gold-600 md:text-[2rem]">
+              <span className="tnum font-display text-[1.75rem] font-normal leading-none text-navy-700 transition-colors duration-500 group-hover:text-gold-700 md:text-[2rem]">
                 {deal.amount}
               </span>
 
@@ -47,7 +47,7 @@ export default function TransactionIndex({ items }: { items: Post[] }) {
                 <span className="block font-sans text-[0.9375rem] leading-snug text-navy-900 transition-colors duration-500 group-hover:text-navy-700">
                   {deal.detail}
                 </span>
-                <span className="mt-1.5 block font-sans text-[0.8125rem] text-stone-400 md:hidden">
+                <span className="mt-1.5 block font-sans text-[0.8125rem] text-stone-500 md:hidden">
                   {deal.assetType} · {deal.location}
                 </span>
               </span>

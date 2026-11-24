@@ -96,7 +96,7 @@ export default function ContactForm() {
     }`;
 
   const labelCls =
-    'pointer-events-none absolute left-0 top-7 origin-left font-sans text-[0.9375rem] text-stone-400 transition-all duration-300 ease-offset peer-focus:top-0 peer-focus:text-[0.625rem] peer-focus:uppercase peer-focus:tracking-[0.18em] peer-focus:text-navy-700 peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[0.625rem] peer-[:not(:placeholder-shown)]:uppercase peer-[:not(:placeholder-shown)]:tracking-[0.18em] peer-[:not(:placeholder-shown)]:text-stone-400';
+    'pointer-events-none absolute left-0 top-7 origin-left font-sans text-[0.9375rem] text-stone-500 transition-all duration-300 ease-offset peer-focus:top-0 peer-focus:text-[0.625rem] peer-focus:uppercase peer-focus:tracking-[0.18em] peer-focus:text-navy-700 peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-[0.625rem] peer-[:not(:placeholder-shown)]:uppercase peer-[:not(:placeholder-shown)]:tracking-[0.18em] peer-[:not(:placeholder-shown)]:text-stone-500';
 
   return (
     <AnimatePresence mode="wait">
@@ -152,7 +152,7 @@ export default function ContactForm() {
                   className={inputCls(f.name)}
                 />
                 <label htmlFor={f.name} className={labelCls}>
-                  {f.label} <span className="text-gold-500">*</span>
+                  {f.label} <span className="text-gold-700">*</span>
                 </label>
                 {errors[f.name] && (
                   <p id={`${f.name}-error`} role="alert" className="mt-2 font-sans text-[0.75rem] text-gold-700">
@@ -174,7 +174,7 @@ export default function ContactForm() {
                 className={`${inputCls('message')} resize-none`}
               />
               <label htmlFor="message" className={labelCls}>
-                Tell us about your transaction <span className="text-gold-500">*</span>
+                Tell us about your transaction <span className="text-gold-700">*</span>
               </label>
               {errors.message && (
                 <p id="message-error" role="alert" className="mt-2 font-sans text-[0.75rem] text-gold-700">
@@ -207,7 +207,7 @@ export default function ContactForm() {
                 <Link href="/privacy" className="underline decoration-gold-400 underline-offset-4 hover:text-navy-700">
                   privacy policy
                 </Link>
-                . <span className="text-gold-500">*</span>
+                . <span className="text-gold-700">*</span>
               </span>
             </label>
             {errors.consent && (

@@ -48,7 +48,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       {/* ─── Masthead ────────────────────────────────────────────────── */}
       <Section tone="deep" className="grain flex min-h-hero flex-col justify-end overflow-hidden">
         <div className="shell w-full pb-[clamp(3.5rem,7vh,5.5rem)] pt-[calc(var(--nav-h)+clamp(3.5rem,8vh,6rem))]">
-          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-3 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/45">
+          <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-3 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/60">
             <Link href="/" className="transition-colors hover:text-gold-400">
               Offset Capital
             </Link>
@@ -99,7 +99,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 { label: 'Location', value: post.deal.location },
               ].map((row) => (
                 <div key={row.label} className="bg-white px-6 py-7">
-                  <dt className="font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-stone-400">
+                  <dt className="font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-stone-500">
                     {row.label}
                   </dt>
                   <dd className="tnum mt-3 font-display text-[1.5rem] font-light text-navy-900">
@@ -118,13 +118,13 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <div className="grid gap-12 lg:grid-cols-[1fr_minmax(0,42rem)_1fr] lg:gap-10">
             {/* Left rail */}
             <aside className="lg:sticky lg:top-32 lg:self-start">
-              <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
+              <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-500">
                 Published
               </p>
               <p className="mt-2.5 font-display text-lg font-light text-navy-900">{post.dateLabel}</p>
               {post.category && (
                 <>
-                  <p className="mt-8 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
+                  <p className="mt-8 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-500">
                     Category
                   </p>
                   <p className="mt-2.5 font-display text-lg font-light text-navy-900">{post.category}</p>
@@ -134,6 +134,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             </aside>
 
             {/* Article */}
+            <div>
             <article className="prose-editorial">
               <Reveal>
                 <p className="mb-10 font-display text-[1.35rem] font-light leading-[1.5] text-navy-900">
@@ -166,7 +167,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       <dl className="my-8 grid gap-px bg-navy-900/10 sm:grid-cols-2">
                         {block.items.map((item) => (
                           <div key={item.label} className="bg-white px-5 py-6">
-                            <dt className="font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-stone-400">
+                            <dt className="font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-stone-500">
                               {item.label}
                             </dt>
                             <dd className="tnum mt-2.5 font-display text-[1.35rem] font-light text-navy-900">
@@ -185,7 +186,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                         <p className="font-display text-[1.4rem] font-light italic leading-[1.45] text-navy-900">
                           “{block.c}”
                         </p>
-                        <footer className="mt-5 font-sans text-[0.6875rem] uppercase tracking-[0.18em] text-stone-400">
+                        <footer className="mt-5 font-sans text-[0.6875rem] uppercase tracking-[0.18em] text-stone-500">
                           {block.by}
                         </footer>
                       </blockquote>
@@ -199,25 +200,27 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 );
               })}
 
-              <div className="mt-14 border-t border-navy-900/10 pt-9">
-                <ShareLinks title={post.title} slug={post.slug} />
-              </div>
-
-              <Reveal>
-                <div className="mt-12 bg-stone-50 px-7 py-9">
-                  <p className="eyebrow text-navy-700">Discuss a transaction</p>
-                  <p className="mt-5 font-display text-[1.3rem] font-light leading-snug text-navy-900">
-                    Reach out to us directly to discuss your deal.
-                  </p>
-                  <div className="mt-7 flex flex-wrap gap-4">
-                    <Button href={`mailto:${site.email}`}>{site.email}</Button>
-                    <Button href="/strategies" variant="outline">
-                      Lending capabilities
-                    </Button>
-                  </div>
-                </div>
-              </Reveal>
             </article>
+
+            <div className="mt-14 border-t border-navy-900/10 pt-9">
+              <ShareLinks title={post.title} slug={post.slug} />
+            </div>
+
+            <Reveal>
+              <div className="mt-12 bg-stone-50 px-7 py-9">
+                <p className="eyebrow text-navy-700">Discuss a transaction</p>
+                <p className="mt-5 font-display text-[1.3rem] font-light leading-snug text-navy-900">
+                  Reach out to us directly to discuss your deal.
+                </p>
+                <div className="mt-7 flex flex-wrap gap-4">
+                  <Button href={`mailto:${site.email}`}>{site.email}</Button>
+                  <Button href="/strategies" variant="outline">
+                    Lending capabilities
+                  </Button>
+                </div>
+              </div>
+            </Reveal>
+            </div>
 
             <div aria-hidden className="hidden lg:block" />
           </div>

@@ -63,7 +63,7 @@ export default function NewsIndex({ posts }: { posts: Post[] }) {
               <CategoryTag category={featured.category} />
               <time
                 dateTime={featured.date}
-                className="font-sans text-[0.6875rem] uppercase tracking-[0.14em] text-stone-400"
+                className="font-sans text-[0.6875rem] uppercase tracking-[0.14em] text-stone-500"
               >
                 {featured.dateLabel}
               </time>
@@ -85,7 +85,7 @@ export default function NewsIndex({ posts }: { posts: Post[] }) {
 
       {/* ─── Filters ─────────────────────────────────────────────────── */}
       <div className="mt-section flex flex-wrap items-center gap-x-8 gap-y-4 border-y border-navy-900/10 py-6">
-        <span className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
+        <span className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-500">
           Filter
         </span>
         {['All', ...categories].map((c) => {
@@ -97,11 +97,11 @@ export default function NewsIndex({ posts }: { posts: Post[] }) {
               onClick={() => setFilter(c)}
               aria-pressed={active}
               className={`group relative font-sans text-[0.6875rem] font-medium uppercase tracking-[0.16em] transition-colors duration-300 ${
-                active ? 'text-navy-700' : 'text-stone-400 hover:text-navy-700'
+                active ? 'text-navy-700' : 'text-stone-500 hover:text-navy-700'
               }`}
             >
               {c}
-              <span className="ml-2 tnum text-[0.5625rem] text-stone-300">{counts[c] ?? 0}</span>
+              <span className="ml-2 tnum text-[0.5625rem] text-stone-500">{counts[c] ?? 0}</span>
               <span
                 aria-hidden
                 className={`absolute -bottom-2 left-0 h-px bg-gold-400 transition-all duration-500 ease-offset ${
@@ -131,7 +131,7 @@ export default function NewsIndex({ posts }: { posts: Post[] }) {
         </AnimatePresence>
 
         {visible.length === 0 && (
-          <p className="font-sans text-sm text-stone-400">No posts in this category yet.</p>
+          <p className="font-sans text-sm text-stone-500">No posts in this category yet.</p>
         )}
       </div>
     </>

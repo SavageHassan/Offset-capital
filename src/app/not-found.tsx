@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <section className="grain flex min-h-[100svh] items-center bg-navy-950 text-white">
       <div className="shell py-section">
-        <OffsetMark className="h-11 w-11 text-white/30" />
+        <OffsetMark className="h-11 w-11 text-white/55" />
         <p className="eyebrow mt-10 text-gold-400">404</p>
         <h1 className="mt-7 max-w-[20ch] font-display text-display-lg font-extralight leading-[1.04]">
           This page could not be found.

@@ -58,7 +58,7 @@ export default function ArticleCard({
         <div className="mt-6">
           <div className="flex items-center gap-4">
             <CategoryTag category={post.category} />
-            <time dateTime={post.date} className="font-sans text-[0.6875rem] uppercase tracking-[0.14em] text-stone-400">
+            <time dateTime={post.date} className="font-sans text-[0.6875rem] uppercase tracking-[0.14em] text-stone-500">
               {post.dateLabel}
             </time>
           </div>

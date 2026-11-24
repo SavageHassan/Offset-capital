@@ -40,23 +40,23 @@ export default function ContactPage() {
             {/* Direct details */}
             <aside className="lg:pt-4">
               <div className="bg-navy-900 px-8 py-10 text-white">
-                <OffsetMark className="h-9 w-9 text-white/30" />
+                <OffsetMark className="h-9 w-9 text-white/55" />
                 <p className="eyebrow mt-8 text-gold-400">Direct</p>
                 <div className="mt-7 space-y-7">
                   <div>
-                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/40">Email</p>
+                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/55">Email</p>
                     <a href={`mailto:${site.email}`} className="link-underline mt-2 block font-display text-[1.4rem] font-light">
                       {site.email}
                     </a>
                   </div>
                   <div>
-                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/40">Telephone</p>
+                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/55">Telephone</p>
                     <a href={site.phoneHref} className="link-underline tnum mt-2 block font-display text-[1.4rem] font-light">
                       {site.phone}
                     </a>
                   </div>
                   <div>
-                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/40">LinkedIn</p>
+                    <p className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/55">LinkedIn</p>
                     <a
                       href={site.linkedin}
                       target="_blank"
@@ -78,7 +78,7 @@ export default function ContactPage() {
                     <li>Existing debt, including any payoff discussions underway</li>
                     <li>Your business plan and intended exit</li>
                   </ul>
-                  <p className="mt-6 font-sans text-[0.75rem] leading-relaxed text-stone-400">
+                  <p className="mt-6 font-sans text-[0.75rem] leading-relaxed text-stone-500">
                     The items above reflect what Offset Capital describes pressure-testing when sizing
                     a loan — the owner’s expectation, the appraisal, and where the asset could trade
                     today.
