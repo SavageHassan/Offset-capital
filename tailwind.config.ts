@@ -69,6 +69,10 @@ const config: Config = {
         section: 'clamp(5rem, 11vh, 9.5rem)',
         gutter: 'clamp(1.25rem, 5vw, 5.5rem)',
       },
+      minHeight: {
+        /** Interior page mastheads all share this height. */
+        hero: 'clamp(28rem, 63vh, 37rem)',
+      },
       maxWidth: {
         shell: '96rem',
         measure: '38rem',

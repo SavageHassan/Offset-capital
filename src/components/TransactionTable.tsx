@@ -52,13 +52,13 @@ export default function TransactionTable({ items }: { items: Post[] }) {
                 >
                   <Link
                     href={`/news/${post.slug}`}
-                    className="group grid grid-cols-[auto_1fr] items-baseline gap-x-6 gap-y-1.5 py-5 md:grid-cols-[6.5rem_8.5rem_1fr_9rem_1.5rem] md:gap-x-7"
+                    className="group grid grid-cols-1 items-baseline gap-x-8 gap-y-1.5 py-5 md:grid-cols-[9rem_9rem_minmax(0,1fr)_10rem_1.5rem]"
                   >
                     <span className="tnum font-display text-[1.3rem] font-normal leading-none text-navy-700 transition-colors duration-400 group-hover:text-gold-600 md:text-[1.45rem]">
                       {deal.amount}
                     </span>
 
-                    <span className="font-sans text-[0.625rem] uppercase tracking-[0.16em] text-stone-400 md:order-none">
+                    <span className="font-sans text-[0.625rem] uppercase tracking-[0.16em] text-stone-400">
                       {deal.kind === 'equity'
                         ? 'Preferred equity'
                         : deal.kind === 'advisory'
@@ -66,11 +66,11 @@ export default function TransactionTable({ items }: { items: Post[] }) {
                           : 'Loan'}
                     </span>
 
-                    <span className="col-span-full font-sans text-[0.9375rem] leading-snug text-navy-900 transition-colors duration-400 group-hover:text-navy-700 md:col-span-1">
+                    <span className="min-w-0 font-sans text-[0.9375rem] leading-snug text-navy-900 transition-colors duration-400 group-hover:text-navy-700">
                       {deal.detail}
                     </span>
 
-                    <span className="col-span-full font-sans text-[0.75rem] uppercase tracking-[0.14em] text-stone-500 md:col-span-1 md:text-[0.6875rem]">
+                    <span className="min-w-0 font-sans text-[0.75rem] uppercase tracking-[0.14em] text-stone-500 md:text-[0.6875rem]">
                       {deal.location}
                     </span>
 

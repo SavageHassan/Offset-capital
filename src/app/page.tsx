@@ -7,7 +7,6 @@ import CapitalStack from '@/components/CapitalStack';
 import TransactionIndex from '@/components/TransactionIndex';
 import ArticleCard from '@/components/ArticleCard';
 import Button from '@/components/Button';
-import CTA from '@/components/CTA';
 import { Section, SectionLabel } from '@/components/Section';
 import { media, pillars, site } from '@/data/site';
 import { propertyTypes, strategies, usesOfProceeds } from '@/data/strategies';
@@ -369,10 +368,6 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <CTA
-        heading="Let’s talk about your transaction."
-        body="Send us the deal. We are always happy to take a look, talk through where we think proceeds can land, and see whether there is a structure that works."
-      />
     </>
   );
 }

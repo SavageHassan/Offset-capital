@@ -22,14 +22,19 @@ export default function StrategiesPage() {
       <PageHero
         breadcrumb="Strategies"
         eyebrow="Financing capabilities"
-        lines={['Full capital stack', 'solutions, tailored', 'to each situation']}
-        intro={site.strategies}
+        lines={['Full capital stack solutions,', 'tailored to each situation']}
+        intro="Senior bridge loans, preferred equity, mezzanine debt and construction financing — structured around each borrower’s business plan."
         image={media.heroCity}
       />
 
       {/* ─── Index of the three products ─────────────────────────────── */}
       <Section tone="white" className="border-b border-navy-900/10 py-14">
         <div className="shell">
+          <Reveal>
+            <p className="mb-12 max-w-measure-lg font-display text-[clamp(1.25rem,1.9vw,1.6rem)] font-light leading-[1.5] text-navy-900">
+              {site.strategies}
+            </p>
+          </Reveal>
           <div className="grid gap-px bg-navy-900/10 md:grid-cols-3">
             {strategies.map((s, i) => (
               <Reveal key={s.slug} delay={i * 0.07} className="bg-white">

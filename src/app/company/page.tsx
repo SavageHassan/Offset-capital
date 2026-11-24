@@ -28,8 +28,8 @@ export default function CompanyPage() {
       <PageHero
         breadcrumb="The company"
         eyebrow="Launched 2024 · New York"
-        lines={['Small-balance debt', 'and equity, tailor-made', 'for entrepreneurs']}
-        intro={site.company}
+        lines={['Small-balance debt and equity,', 'tailor-made for entrepreneurs']}
+        intro="Small-balance debt and equity solutions, tailor-made for real estate entrepreneurs in the middle market."
         image={media.companyHero}
       />
 

@@ -46,8 +46,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <ReadingProgress />
 
       {/* ─── Masthead ────────────────────────────────────────────────── */}
-      <Section tone="deep" className="grain overflow-hidden">
-        <div className="shell pb-[clamp(3.5rem,7vh,6rem)] pt-[calc(var(--nav-h)+clamp(4rem,9vh,7rem))]">
+      <Section tone="deep" className="grain flex min-h-hero flex-col justify-end overflow-hidden">
+        <div className="shell w-full pb-[clamp(3.5rem,7vh,5.5rem)] pt-[calc(var(--nav-h)+clamp(3.5rem,8vh,6rem))]">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-3 font-sans text-[0.625rem] uppercase tracking-[0.18em] text-white/45">
             <Link href="/" className="transition-colors hover:text-gold-400">
               Offset Capital
@@ -73,38 +73,43 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             className="mt-8 max-w-[24ch] font-display text-display-md font-extralight leading-[1.07] text-white"
           />
 
-          {/* Deal summary strip, for transaction announcements. */}
-          {post.deal && (
-            <Reveal delay={0.3}>
-              <dl className="mt-14 grid gap-px border-t border-white/15 pt-px sm:grid-cols-3">
-                {[
-                  { label: post.deal.kind === 'equity' ? 'Investment' : post.deal.kind === 'advisory' ? 'Sale price' : 'Loan amount', value: post.deal.amount },
-                  { label: 'Asset type', value: post.deal.assetType },
-                  { label: 'Location', value: post.deal.location },
-                ].map((row) => (
-                  <div key={row.label} className="py-7 sm:pr-8">
-                    <dt className="font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-white/40">
-                      {row.label}
-                    </dt>
-                    <dd className="tnum mt-3 font-display text-[1.5rem] font-light text-white">
-                      {row.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </Reveal>
-          )}
         </div>
       </Section>
 
       {/* ─── Lead image ──────────────────────────────────────────────── */}
-      <div className="relative bg-navy-950">
+      <div className="relative bg-navy-950 pb-px">
         <div className="shell">
           <div className="relative -mt-px aspect-[16/9] overflow-hidden bg-navy-900 lg:aspect-[21/9]">
             <Image src={post.image} alt="" fill priority sizes="100vw" className="object-cover" />
           </div>
+
+          {post.deal && (
+            <dl className="grid gap-px bg-navy-900/10 sm:grid-cols-3">
+              {[
+                {
+                  label:
+                    post.deal.kind === 'equity'
+                      ? 'Investment'
+                      : post.deal.kind === 'advisory'
+                        ? 'Sale price'
+                        : 'Loan amount',
+                  value: post.deal.amount,
+                },
+                { label: 'Asset type', value: post.deal.assetType },
+                { label: 'Location', value: post.deal.location },
+              ].map((row) => (
+                <div key={row.label} className="bg-white px-6 py-7">
+                  <dt className="font-sans text-[0.5625rem] uppercase tracking-[0.18em] text-stone-400">
+                    {row.label}
+                  </dt>
+                  <dd className="tnum mt-3 font-display text-[1.5rem] font-light text-navy-900">
+                    {row.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )}
         </div>
-        <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/2 bg-white" style={{ zIndex: -1 }} />
       </div>
 
       {/* ─── Body ────────────────────────────────────────────────────── */}
