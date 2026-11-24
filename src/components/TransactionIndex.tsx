@@ -62,7 +62,7 @@ export default function TransactionIndex({ items }: { items: Post[] }) {
         </AnimatePresence>
       </motion.div>
 
-      <ul className="relative z-10 border-t border-navy-900/12">
+      <ul className="relative z-10 border-t border-navy-900/10">
         {items.map((post, i) => {
           const deal = post.deal!;
           const dim = active !== null && active !== i;
@@ -74,7 +74,7 @@ export default function TransactionIndex({ items }: { items: Post[] }) {
               viewport={VIEWPORT}
               transition={{ duration: 0.7, ease: EASE, delay: Math.min(i, 6) * 0.05 }}
               onMouseEnter={() => setActive(i)}
-              className="border-b border-navy-900/12"
+              className="border-b border-navy-900/10"
             >
               <Link
                 href={`/news/${post.slug}`}

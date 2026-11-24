@@ -5,7 +5,6 @@ import Reveal from '@/components/Reveal';
 import SplitHeading from '@/components/SplitHeading';
 import ParamSheet from '@/components/ParamSheet';
 import ParallaxImage from '@/components/ParallaxImage';
-import CapitalStack from '@/components/CapitalStack';
 import Button from '@/components/Button';
 import CTA from '@/components/CTA';
 import { Section, SectionLabel } from '@/components/Section';
@@ -144,26 +143,6 @@ export default function StrategiesPage() {
         );
       })}
 
-      {/* ─── Capital stack ───────────────────────────────────────────── */}
-      <Section tone="white" className="py-section">
-        <div className="shell">
-          <div className="mb-16 max-w-measure-lg">
-            <SectionLabel>Structuring</SectionLabel>
-            <SplitHeading
-              lines={['Layered behind', 'our senior loan']}
-              className="mt-7 font-display text-display-md font-extralight leading-[1.06] text-navy-900"
-            />
-            <Reveal delay={0.1}>
-              <p className="prose-editorial mt-8">
-                We will often layer preferred equity and mezzanine debt behind our senior bridge loans
-                to help complete the capital stack.
-              </p>
-            </Reveal>
-          </div>
-          <CapitalStack />
-        </div>
-      </Section>
-
       {/* ─── Eligibility at a glance ─────────────────────────────────── */}
       <Section tone="deep" className="py-section">
         <div className="shell">
@@ -251,7 +230,10 @@ export default function StrategiesPage() {
         </div>
       </Section>
 
-      <CTA heading="Want to work with us?" />
+      <CTA
+        heading="Want to work with us?"
+        body="Tell us the property, the proceeds you need and where the existing debt stands. We will come back with where we think this can be sized."
+      />
     </>
   );
 }

@@ -33,7 +33,7 @@ export default function PageHero({
     <div ref={ref} className="grain relative isolate overflow-hidden bg-navy-900">
       <motion.div style={{ y, opacity: fade }} className="absolute inset-0 -z-10 scale-110">
         <Image src={image} alt="" fill priority sizes="100vw" className="object-cover opacity-[0.45]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-900/58 to-navy-950/92" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-900/60 to-navy-950/90" />
       </motion.div>
 
       <div className="shell pb-[clamp(4rem,9vh,7rem)] pt-[calc(var(--nav-h)+clamp(4.5rem,11vh,9rem))]">

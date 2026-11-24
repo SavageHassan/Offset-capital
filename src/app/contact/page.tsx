@@ -70,7 +70,7 @@ export default function ContactPage() {
               </div>
 
               <Reveal delay={0.1}>
-                <div className="mt-10 border-t border-navy-900/12 pt-9">
+                <div className="mt-10 border-t border-navy-900/10 pt-9">
                   <p className="eyebrow text-navy-700">What to include</p>
                   <ul className="prose-editorial mt-6">
                     <li>Property type, location and current occupancy</li>
@@ -87,13 +87,13 @@ export default function ContactPage() {
               </Reveal>
 
               <Reveal delay={0.15}>
-                <div className="mt-10 border-t border-navy-900/12 pt-9">
+                <div className="mt-10 border-t border-navy-900/10 pt-9">
                   <p className="eyebrow text-navy-700">Lending at a glance</p>
                   <dl className="mt-6 space-y-4">
                     {strategies.map((s) => {
                       const size = s.params.find((p) => p.label.startsWith('Loan Size'));
                       return (
-                        <div key={s.slug} className="flex items-baseline justify-between gap-5 border-b border-navy-900/8 pb-4">
+                        <div key={s.slug} className="flex items-baseline justify-between gap-5 border-b border-navy-900/10 pb-4">
                           <dt className="font-sans text-[0.8125rem] text-stone-600">{s.name}</dt>
                           <dd className="tnum shrink-0 font-display text-[1.05rem] text-navy-900">
                             {size?.value ?? '—'}

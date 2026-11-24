@@ -10,12 +10,15 @@ const variants = {
   solid: 'bg-navy-700 text-white hover:text-navy-900',
   outline: 'border border-navy-700/25 text-navy-800 hover:text-navy-900',
   ghost: 'border border-white/25 text-white hover:text-navy-900',
+  /** Highest-emphasis action on a dark field. */
+  gold: 'bg-gold-400 text-navy-900 hover:text-white',
 } as const;
 
 const sweep = {
   solid: 'bg-gold-400',
   outline: 'bg-gold-200',
   ghost: 'bg-white',
+  gold: 'bg-navy-900',
 } as const;
 
 type Props = {

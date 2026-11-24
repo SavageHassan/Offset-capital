@@ -6,7 +6,6 @@ import ParallaxImage from '@/components/ParallaxImage';
 import CapitalStack from '@/components/CapitalStack';
 import TransactionIndex from '@/components/TransactionIndex';
 import ArticleCard from '@/components/ArticleCard';
-import TeamSection from '@/components/TeamSection';
 import Button from '@/components/Button';
 import CTA from '@/components/CTA';
 import { Section, SectionLabel } from '@/components/Section';
@@ -46,10 +45,6 @@ export default function HomePage() {
                 <p className="max-w-measure-lg font-display text-[clamp(1.35rem,2.1vw,1.75rem)] font-light leading-[1.5] text-navy-900">
                   {site.positioning}
                 </p>
-              </Reveal>
-
-              <Reveal delay={0.1}>
-                <p className="prose-editorial mt-9 max-w-measure-lg">{site.company}</p>
               </Reveal>
 
               {/* Pillars */}
@@ -168,7 +163,7 @@ export default function HomePage() {
               );
               const flip = i % 2 === 1;
               return (
-                <Reveal key={s.slug} className="border-t border-navy-900/12 py-12 lg:py-16">
+                <Reveal key={s.slug} className="border-t border-navy-900/10 py-12 lg:py-16">
                   <Link
                     href={`/strategies#${s.slug}`}
                     className="group grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-10"
@@ -332,29 +327,20 @@ export default function HomePage() {
                   published in their biographies. They are not Offset Capital’s own origination volume.
                 </p>
               </Reveal>
+              <Reveal delay={0.08}>
+                <Link
+                  href="/company#team"
+                  className="group mt-9 inline-flex items-center gap-3 font-sans text-label font-medium uppercase tracking-[0.18em] text-white transition-colors duration-500 hover:text-gold-400"
+                >
+                  Meet the three principals
+                  <span
+                    aria-hidden
+                    className="block h-px w-9 bg-gold-400 transition-all duration-500 ease-offset group-hover:w-16"
+                  />
+                </Link>
+              </Reveal>
             </div>
           </div>
-        </div>
-      </Section>
-
-      {/* ─── Team ────────────────────────────────────────────────────── */}
-      <Section tone="white" className="py-section">
-        <div className="shell">
-          <div className="mb-14 flex flex-wrap items-end justify-between gap-8">
-            <div className="max-w-measure-lg">
-              <SectionLabel>The team</SectionLabel>
-              <SplitHeading
-                lines={['Three principals,', 'one credit view']}
-                className="mt-7 font-display text-display-md font-extralight leading-[1.06] text-navy-900"
-              />
-            </div>
-            <Reveal>
-              <Button href="/company" variant="outline">
-                About the company
-              </Button>
-            </Reveal>
-          </div>
-          <TeamSection />
         </div>
       </Section>
 
@@ -383,7 +369,10 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <CTA />
+      <CTA
+        heading="Let’s talk about your transaction."
+        body="Send us the deal. We are always happy to take a look, talk through where we think proceeds can land, and see whether there is a structure that works."
+      />
     </>
   );
 }

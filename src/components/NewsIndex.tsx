@@ -84,7 +84,7 @@ export default function NewsIndex({ posts }: { posts: Post[] }) {
       </motion.article>
 
       {/* ─── Filters ─────────────────────────────────────────────────── */}
-      <div className="mt-section flex flex-wrap items-center gap-x-8 gap-y-4 border-y border-navy-900/12 py-6">
+      <div className="mt-section flex flex-wrap items-center gap-x-8 gap-y-4 border-y border-navy-900/10 py-6">
         <span className="font-sans text-[0.625rem] uppercase tracking-[0.18em] text-stone-400">
           Filter
         </span>

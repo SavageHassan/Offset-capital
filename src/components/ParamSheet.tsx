@@ -85,7 +85,7 @@ export default function ParamSheet({
             viewport={VIEWPORT}
             transition={{ duration: 0.6, ease: EASE, delay: i * 0.04 }}
             className={`grid grid-cols-1 gap-1 border-t py-4 sm:grid-cols-[11rem_1fr] sm:gap-8 ${
-              dark ? 'border-white/12' : 'border-navy-900/10'
+              dark ? 'border-white/10' : 'border-navy-900/10'
             }`}
           >
             <dt

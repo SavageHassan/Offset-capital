@@ -194,7 +194,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 );
               })}
 
-              <div className="mt-14 border-t border-navy-900/12 pt-9">
+              <div className="mt-14 border-t border-navy-900/10 pt-9">
                 <ShareLinks title={post.title} slug={post.slug} />
               </div>
 
@@ -242,7 +242,10 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         </div>
       </Section>
 
-      <CTA />
+      <CTA
+        heading="Have a transaction like this one?"
+        body="Reach out directly to discuss your deal. We will tell you quickly whether it is something we can structure."
+      />
     </>
   );
 }

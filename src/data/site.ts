@@ -78,6 +78,58 @@ export const pillars = [
   },
 ] as const;
 
+/**
+ * Company milestones.
+ *
+ * Each entry is drawn from a dated Offset Capital announcement and links back
+ * to it. Nothing here is interpolated — where a year has no announcement, it
+ * simply does not appear.
+ */
+export const milestones = [
+  {
+    date: 'February 2024',
+    title: 'Offset Capital launches',
+    body:
+      'Commercial Mortgage Alert covers the launch — “Bridge Loan Pros Launch New Shop” — as the firm targets middle-market borrowers with senior and subordinate debt.',
+    slug: 'offset-capital-spotlight-in-cma',
+  },
+  {
+    date: 'May 2024',
+    title: 'First preferred equity investment',
+    body:
+      'A $1,775,000 pref equity investment in The Broome Hotel, a 14-key boutique hotel at 431 Broome Street in Manhattan, structured with a full accrual on the pref.',
+    slug: 'offset-capital-completes-18mm-pref-equity-investment-in-the-broome-hotel-in-new-york',
+  },
+  {
+    date: 'July 2024',
+    title: 'Institutional capital partner',
+    body:
+      'A strategic partnership with an institutional asset manager expands the senior bridge program to loans from $5 million to over $50 million, across all asset classes nationwide.',
+    slug: 'offset-capital-strengthens-its-position-in-the-middle-market',
+  },
+  {
+    date: 'November 2024',
+    title: 'Lending capacity expands',
+    body:
+      'Through the joint venture, Offset Capital is set to provide $150 million in debt funding in 2025. Commercial Mortgage Alert reports the firm’s senior debt focus.',
+    slug: 'a-large-appetite-for-senior-bridge-loans-offset-capital-spotlighted-in-cma',
+  },
+  {
+    date: 'September 2026',
+    title: 'Construction lending added',
+    body:
+      'The platform expands beyond bridge financing to fund multifamily and industrial developments from the ground up.',
+    slug: 'offset-capital-now-offering-construction-loans',
+  },
+  {
+    date: 'October 2026',
+    title: 'The Credit Corner begins',
+    body:
+      'A standing commentary on what leading credit investors are seeing — how rates, cap rates and takeout assumptions are reshaping what deals can actually support.',
+    slug: 'credit-corner-whats-driving-deals-today',
+  },
+] as const;
+
 /** Imagery — genuine assets served from Offset Capital's own Cloudinary account. */
 export const media = {
   heroCity:

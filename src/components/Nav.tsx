@@ -16,8 +16,13 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const [last, setLast] = useState(0);
 
-  // On the homepage the bar starts transparent over the hero photograph.
-  const overHero = pathname === '/' && !solid;
+  /**
+   * Every page opens on a dark hero, so the bar starts transparent with white
+   * contents and only switches to the light treatment once it has scrolled off
+   * that hero. Keying this to the homepage alone left the logo and links navy
+   * on navy everywhere else.
+   */
+  const overHero = !solid;
 
   useMotionValueEvent(scrollY, 'change', (y) => {
     setSolid(y > 40);
@@ -44,7 +49,7 @@ export default function Nav() {
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ease-offset ${
           overHero || open
             ? 'bg-transparent'
-            : 'border-b border-navy-900/8 bg-white/88 backdrop-blur-xl'
+            : 'border-b border-navy-900/10 bg-white/90 backdrop-blur-xl'
         }`}
       >
         <div className="shell flex h-[var(--nav-h)] items-center justify-between gap-8">

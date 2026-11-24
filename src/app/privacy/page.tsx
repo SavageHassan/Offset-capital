@@ -48,7 +48,7 @@ export default function PrivacyPage() {
         <div className="shell">
           <div className="max-w-measure-lg">
             {sections.map((s, i) => (
-              <Reveal key={s.heading} delay={i * 0.06} className="border-t border-navy-900/12 py-12 first:border-t-0 first:pt-0">
+              <Reveal key={s.heading} delay={i * 0.06} className="border-t border-navy-900/10 py-12 first:border-t-0 first:pt-0">
                 <h2 className="font-display text-display-sm font-light leading-[1.12] text-navy-900">
                   {s.heading}
                 </h2>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
               </Reveal>
             ))}
 
-            <Reveal className="border-t border-navy-900/12 pt-12">
+            <Reveal className="border-t border-navy-900/10 pt-12">
               <p className="font-display text-[1.5rem] font-light italic text-navy-900">That’s it.</p>
               <p className="prose-editorial mt-5">
                 Thank you for visiting our website. If you need more information, please email us at{' '}
